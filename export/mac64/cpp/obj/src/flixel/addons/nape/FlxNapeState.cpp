@@ -3,23 +3,14 @@
 #ifndef INCLUDED_flixel_FlxBasic
 #include <flixel/FlxBasic.h>
 #endif
-#ifndef INCLUDED_flixel_FlxCamera
-#include <flixel/FlxCamera.h>
-#endif
 #ifndef INCLUDED_flixel_FlxG
 #include <flixel/FlxG.h>
-#endif
-#ifndef INCLUDED_flixel_FlxGame
-#include <flixel/FlxGame.h>
 #endif
 #ifndef INCLUDED_flixel_FlxState
 #include <flixel/FlxState.h>
 #endif
 #ifndef INCLUDED_flixel_addons_nape_FlxNapeState
 #include <flixel/addons/nape/FlxNapeState.h>
-#endif
-#ifndef INCLUDED_flixel_addons_nape_GraphicNapeDebug
-#include <flixel/addons/nape/GraphicNapeDebug.h>
 #endif
 #ifndef INCLUDED_flixel_group_FlxGroup
 #include <flixel/group/FlxGroup.h>
@@ -29,21 +20,6 @@
 #endif
 #ifndef INCLUDED_flixel_interfaces_IFlxDestroyable
 #include <flixel/interfaces/IFlxDestroyable.h>
-#endif
-#ifndef INCLUDED_flixel_interfaces_IFlxPooled
-#include <flixel/interfaces/IFlxPooled.h>
-#endif
-#ifndef INCLUDED_flixel_system_debug_ButtonAlignment
-#include <flixel/system/debug/ButtonAlignment.h>
-#endif
-#ifndef INCLUDED_flixel_system_frontEnds_DebuggerFrontEnd
-#include <flixel/system/frontEnds/DebuggerFrontEnd.h>
-#endif
-#ifndef INCLUDED_flixel_system_ui_FlxSystemButton
-#include <flixel/system/ui/FlxSystemButton.h>
-#endif
-#ifndef INCLUDED_flixel_util_FlxPoint
-#include <flixel/util/FlxPoint.h>
 #endif
 #ifndef INCLUDED_hxMath
 #include <hxMath.h>
@@ -84,42 +60,6 @@
 #ifndef INCLUDED_nape_space_Space
 #include <nape/space/Space.h>
 #endif
-#ifndef INCLUDED_nape_util_Debug
-#include <nape/util/Debug.h>
-#endif
-#ifndef INCLUDED_nape_util_ShapeDebug
-#include <nape/util/ShapeDebug.h>
-#endif
-#ifndef INCLUDED_openfl__v2_display_BitmapData
-#include <openfl/_v2/display/BitmapData.h>
-#endif
-#ifndef INCLUDED_openfl__v2_display_DisplayObject
-#include <openfl/_v2/display/DisplayObject.h>
-#endif
-#ifndef INCLUDED_openfl__v2_display_DisplayObjectContainer
-#include <openfl/_v2/display/DisplayObjectContainer.h>
-#endif
-#ifndef INCLUDED_openfl__v2_display_IBitmapDrawable
-#include <openfl/_v2/display/IBitmapDrawable.h>
-#endif
-#ifndef INCLUDED_openfl__v2_display_InteractiveObject
-#include <openfl/_v2/display/InteractiveObject.h>
-#endif
-#ifndef INCLUDED_openfl__v2_display_Shape
-#include <openfl/_v2/display/Shape.h>
-#endif
-#ifndef INCLUDED_openfl__v2_display_Sprite
-#include <openfl/_v2/display/Sprite.h>
-#endif
-#ifndef INCLUDED_openfl__v2_events_EventDispatcher
-#include <openfl/_v2/events/EventDispatcher.h>
-#endif
-#ifndef INCLUDED_openfl__v2_events_IEventDispatcher
-#include <openfl/_v2/events/IEventDispatcher.h>
-#endif
-#ifndef INCLUDED_openfl__v2_geom_Rectangle
-#include <openfl/_v2/geom/Rectangle.h>
-#endif
 #ifndef INCLUDED_zpp_nape_phys_ZPP_Body
 #include <zpp_nape/phys/ZPP_Body.h>
 #endif
@@ -135,14 +75,8 @@
 #ifndef INCLUDED_zpp_nape_util_ZPP_BodyList
 #include <zpp_nape/util/ZPP_BodyList.h>
 #endif
-#ifndef INCLUDED_zpp_nape_util_ZPP_Debug
-#include <zpp_nape/util/ZPP_Debug.h>
-#endif
 #ifndef INCLUDED_zpp_nape_util_ZPP_Flags
 #include <zpp_nape/util/ZPP_Flags.h>
-#endif
-#ifndef INCLUDED_zpp_nape_util_ZPP_ShapeDebug
-#include <zpp_nape/util/ZPP_ShapeDebug.h>
 #endif
 #ifndef INCLUDED_zpp_nape_util_ZPP_ShapeList
 #include <zpp_nape/util/ZPP_ShapeList.h>
@@ -183,7 +117,7 @@ Dynamic FlxNapeState_obj::__Create(hx::DynamicArray inArgs)
 
 Void FlxNapeState_obj::create( ){
 {
-		HX_STACK_FRAME("flixel.addons.nape.FlxNapeState","create",0x48261776,"flixel.addons.nape.FlxNapeState.create","flixel/addons/nape/FlxNapeState.hx",84,0x029731c9)
+		HX_STACK_FRAME("flixel.addons.nape.FlxNapeState","create",0x48261776,"flixel.addons.nape.FlxNapeState.create","flixel/addons/nape/FlxNapeState.hx",85,0x029731c9)
 		HX_STACK_THIS(this)
 		HX_STACK_LINE(85)
 		if (((::flixel::addons::nape::FlxNapeState_obj::space == null()))){
@@ -194,14 +128,6 @@ Void FlxNapeState_obj::create( ){
 			HX_STACK_LINE(87)
 			::flixel::addons::nape::FlxNapeState_obj::space = _g1;
 		}
-		HX_STACK_LINE(92)
-		::flixel::addons::nape::GraphicNapeDebug _g2 = ::flixel::addons::nape::GraphicNapeDebug_obj::__new((int)0,(int)0,null(),null());		HX_STACK_VAR(_g2,"_g2");
-		HX_STACK_LINE(92)
-		::flixel::system::ui::FlxSystemButton _g3 = ::flixel::FlxG_obj::debugger->addButton(::flixel::system::debug::ButtonAlignment_obj::RIGHT,_g2,this->toggleDebug_dyn(),true,true);		HX_STACK_VAR(_g3,"_g3");
-		HX_STACK_LINE(92)
-		this->_button = _g3;
-		HX_STACK_LINE(93)
-		this->set_napeDebugEnabled(false);
 	}
 return null();
 }
@@ -418,35 +344,10 @@ return null();
 
 Void FlxNapeState_obj::draw( ){
 {
-		HX_STACK_FRAME("flixel.addons.nape.FlxNapeState","draw",0x549fe9fe,"flixel.addons.nape.FlxNapeState.draw","flixel/addons/nape/FlxNapeState.hx",154,0x029731c9)
+		HX_STACK_FRAME("flixel.addons.nape.FlxNapeState","draw",0x549fe9fe,"flixel.addons.nape.FlxNapeState.draw","flixel/addons/nape/FlxNapeState.hx",155,0x029731c9)
 		HX_STACK_THIS(this)
 		HX_STACK_LINE(155)
 		this->super::draw();
-		HX_STACK_LINE(158)
-		if (((bool((this->_physDbgSpr == null())) || bool((::flixel::addons::nape::FlxNapeState_obj::space == null()))))){
-			HX_STACK_LINE(158)
-			Dynamic();
-		}
-		else{
-			HX_STACK_LINE(158)
-			this->_physDbgSpr->clear();
-			HX_STACK_LINE(158)
-			this->_physDbgSpr->draw(::flixel::addons::nape::FlxNapeState_obj::space);
-			HX_STACK_LINE(158)
-			::flixel::FlxCamera cam = ::flixel::FlxG_obj::camera;		HX_STACK_VAR(cam,"cam");
-			HX_STACK_LINE(158)
-			Float zoom = cam->zoom;		HX_STACK_VAR(zoom,"zoom");
-			HX_STACK_LINE(158)
-			::openfl::_v2::display::DisplayObject sprite = this->_physDbgSpr->zpp_inner->d_shape->shape;		HX_STACK_VAR(sprite,"sprite");
-			HX_STACK_LINE(158)
-			sprite->set_scaleX(zoom);
-			HX_STACK_LINE(158)
-			sprite->set_scaleY(zoom);
-			HX_STACK_LINE(158)
-			sprite->set_x((-(cam->scroll->x) * zoom));
-			HX_STACK_LINE(158)
-			sprite->set_y((-(cam->scroll->y) * zoom));
-		}
 	}
 return null();
 }
@@ -465,66 +366,15 @@ Void FlxNapeState_obj::destroy( ){
 			HX_STACK_LINE(173)
 			::flixel::addons::nape::FlxNapeState_obj::space = null();
 		}
-		HX_STACK_LINE(177)
-		this->set_napeDebugEnabled(false);
-		HX_STACK_LINE(178)
-		if (((this->_button != null()))){
-			HX_STACK_LINE(180)
-			::flixel::FlxG_obj::debugger->removeButton(this->_button,null());
-			HX_STACK_LINE(181)
-			this->_button = null();
-		}
 	}
 return null();
 }
 
 
 bool FlxNapeState_obj::set_napeDebugEnabled( bool Value){
-	HX_STACK_FRAME("flixel.addons.nape.FlxNapeState","set_napeDebugEnabled",0xcc8485ed,"flixel.addons.nape.FlxNapeState.set_napeDebugEnabled","flixel/addons/nape/FlxNapeState.hx",187,0x029731c9)
+	HX_STACK_FRAME("flixel.addons.nape.FlxNapeState","set_napeDebugEnabled",0xcc8485ed,"flixel.addons.nape.FlxNapeState.set_napeDebugEnabled","flixel/addons/nape/FlxNapeState.hx",210,0x029731c9)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(Value,"Value")
-	HX_STACK_LINE(189)
-	if (((this->_button != null()))){
-		HX_STACK_LINE(190)
-		this->_button->set_toggled(!(Value));
-	}
-	HX_STACK_LINE(192)
-	if ((Value)){
-		HX_STACK_LINE(194)
-		if (((this->_physDbgSpr == null()))){
-			HX_STACK_LINE(196)
-			::nape::util::ShapeDebug _g = ::nape::util::ShapeDebug_obj::__new(::flixel::FlxG_obj::width,::flixel::FlxG_obj::height,null());		HX_STACK_VAR(_g,"_g");
-			HX_STACK_LINE(196)
-			this->_physDbgSpr = _g;
-			HX_STACK_LINE(197)
-			this->_physDbgSpr->drawConstraints = true;
-			HX_STACK_LINE(198)
-			this->_physDbgSpr->zpp_inner->d_shape->shape->set_scrollRect(null());
-			HX_STACK_LINE(199)
-			this->_physDbgSpr->thickness = (int)1;
-			HX_STACK_LINE(200)
-			::flixel::FlxG_obj::addChildBelowMouse_openfl__v2_display_DisplayObject(this->_physDbgSpr->zpp_inner->d_shape->shape,null());
-		}
-	}
-	else{
-		HX_STACK_LINE(203)
-		if (((this->_physDbgSpr != null()))){
-			HX_STACK_LINE(205)
-			{
-				HX_STACK_LINE(205)
-				::openfl::_v2::display::DisplayObject Child = this->_physDbgSpr->zpp_inner->d_shape->shape;		HX_STACK_VAR(Child,"Child");
-				HX_STACK_LINE(205)
-				if ((::flixel::FlxG_obj::game->contains(Child))){
-					HX_STACK_LINE(205)
-					::flixel::FlxG_obj::game->removeChild(Child);
-				}
-				HX_STACK_LINE(205)
-				Child;
-			}
-			HX_STACK_LINE(206)
-			this->_physDbgSpr = null();
-		}
-	}
 	HX_STACK_LINE(210)
 	return this->napeDebugEnabled = Value;
 }
@@ -536,29 +386,6 @@ Void FlxNapeState_obj::drawPhysDebug( ){
 {
 		HX_STACK_FRAME("flixel.addons.nape.FlxNapeState","drawPhysDebug",0x65697543,"flixel.addons.nape.FlxNapeState.drawPhysDebug","flixel/addons/nape/FlxNapeState.hx",217,0x029731c9)
 		HX_STACK_THIS(this)
-		HX_STACK_LINE(219)
-		if (((bool((this->_physDbgSpr == null())) || bool((::flixel::addons::nape::FlxNapeState_obj::space == null()))))){
-			HX_STACK_LINE(221)
-			return null();
-		}
-		HX_STACK_LINE(224)
-		this->_physDbgSpr->clear();
-		HX_STACK_LINE(225)
-		this->_physDbgSpr->draw(::flixel::addons::nape::FlxNapeState_obj::space);
-		HX_STACK_LINE(227)
-		::flixel::FlxCamera cam = ::flixel::FlxG_obj::camera;		HX_STACK_VAR(cam,"cam");
-		HX_STACK_LINE(228)
-		Float zoom = cam->zoom;		HX_STACK_VAR(zoom,"zoom");
-		HX_STACK_LINE(229)
-		::openfl::_v2::display::DisplayObject sprite = this->_physDbgSpr->zpp_inner->d_shape->shape;		HX_STACK_VAR(sprite,"sprite");
-		HX_STACK_LINE(231)
-		sprite->set_scaleX(zoom);
-		HX_STACK_LINE(232)
-		sprite->set_scaleY(zoom);
-		HX_STACK_LINE(234)
-		sprite->set_x((-(cam->scroll->x) * zoom));
-		HX_STACK_LINE(235)
-		sprite->set_y((-(cam->scroll->y) * zoom));
 	}
 return null();
 }
@@ -566,55 +393,11 @@ return null();
 
 HX_DEFINE_DYNAMIC_FUNC0(FlxNapeState_obj,drawPhysDebug,(void))
 
-Void FlxNapeState_obj::toggleDebug( ){
-{
-		HX_STACK_FRAME("flixel.addons.nape.FlxNapeState","toggleDebug",0x3a1b5f65,"flixel.addons.nape.FlxNapeState.toggleDebug","flixel/addons/nape/FlxNapeState.hx",242,0x029731c9)
-		HX_STACK_THIS(this)
-		HX_STACK_LINE(242)
-		this->set_napeDebugEnabled(!(this->napeDebugEnabled));
-	}
-return null();
-}
-
-
-HX_DEFINE_DYNAMIC_FUNC0(FlxNapeState_obj,toggleDebug,(void))
-
 ::nape::space::Space FlxNapeState_obj::space;
-
-::nape::util::ShapeDebug FlxNapeState_obj::get_debug( ){
-	HX_STACK_FRAME("flixel.addons.nape.FlxNapeState","get_debug",0x26a40670,"flixel.addons.nape.FlxNapeState.get_debug","flixel/addons/nape/FlxNapeState.hx",47,0x029731c9)
-	HX_STACK_LINE(47)
-	return (hx::TCast< flixel::addons::nape::FlxNapeState >::cast(::flixel::FlxG_obj::game->_state))->_physDbgSpr;
-}
-
-
-STATIC_HX_DEFINE_DYNAMIC_FUNC0(FlxNapeState_obj,get_debug,return )
 
 
 FlxNapeState_obj::FlxNapeState_obj()
 {
-}
-
-void FlxNapeState_obj::__Mark(HX_MARK_PARAMS)
-{
-	HX_MARK_BEGIN_CLASS(FlxNapeState);
-	HX_MARK_MEMBER_NAME(velocityIterations,"velocityIterations");
-	HX_MARK_MEMBER_NAME(positionIterations,"positionIterations");
-	HX_MARK_MEMBER_NAME(napeDebugEnabled,"napeDebugEnabled");
-	HX_MARK_MEMBER_NAME(_physDbgSpr,"_physDbgSpr");
-	HX_MARK_MEMBER_NAME(_button,"_button");
-	::flixel::FlxState_obj::__Mark(HX_MARK_ARG);
-	HX_MARK_END_CLASS();
-}
-
-void FlxNapeState_obj::__Visit(HX_VISIT_PARAMS)
-{
-	HX_VISIT_MEMBER_NAME(velocityIterations,"velocityIterations");
-	HX_VISIT_MEMBER_NAME(positionIterations,"positionIterations");
-	HX_VISIT_MEMBER_NAME(napeDebugEnabled,"napeDebugEnabled");
-	HX_VISIT_MEMBER_NAME(_physDbgSpr,"_physDbgSpr");
-	HX_VISIT_MEMBER_NAME(_button,"_button");
-	::flixel::FlxState_obj::__Visit(HX_VISIT_ARG);
 }
 
 Dynamic FlxNapeState_obj::__Field(const ::String &inName,bool inCallProp)
@@ -625,23 +408,16 @@ Dynamic FlxNapeState_obj::__Field(const ::String &inName,bool inCallProp)
 		break;
 	case 5:
 		if (HX_FIELD_EQ(inName,"space") ) { return space; }
-		if (HX_FIELD_EQ(inName,"debug") ) { return get_debug(); }
 		break;
 	case 6:
 		if (HX_FIELD_EQ(inName,"create") ) { return create_dyn(); }
 		if (HX_FIELD_EQ(inName,"update") ) { return update_dyn(); }
 		break;
 	case 7:
-		if (HX_FIELD_EQ(inName,"_button") ) { return _button; }
 		if (HX_FIELD_EQ(inName,"destroy") ) { return destroy_dyn(); }
 		break;
-	case 9:
-		if (HX_FIELD_EQ(inName,"get_debug") ) { return get_debug_dyn(); }
-		break;
 	case 11:
-		if (HX_FIELD_EQ(inName,"_physDbgSpr") ) { return _physDbgSpr; }
 		if (HX_FIELD_EQ(inName,"createWalls") ) { return createWalls_dyn(); }
-		if (HX_FIELD_EQ(inName,"toggleDebug") ) { return toggleDebug_dyn(); }
 		break;
 	case 13:
 		if (HX_FIELD_EQ(inName,"drawPhysDebug") ) { return drawPhysDebug_dyn(); }
@@ -665,12 +441,6 @@ Dynamic FlxNapeState_obj::__SetField(const ::String &inName,const Dynamic &inVal
 	case 5:
 		if (HX_FIELD_EQ(inName,"space") ) { space=inValue.Cast< ::nape::space::Space >(); return inValue; }
 		break;
-	case 7:
-		if (HX_FIELD_EQ(inName,"_button") ) { _button=inValue.Cast< ::flixel::system::ui::FlxSystemButton >(); return inValue; }
-		break;
-	case 11:
-		if (HX_FIELD_EQ(inName,"_physDbgSpr") ) { _physDbgSpr=inValue.Cast< ::nape::util::ShapeDebug >(); return inValue; }
-		break;
 	case 16:
 		if (HX_FIELD_EQ(inName,"napeDebugEnabled") ) { if (inCallProp) return set_napeDebugEnabled(inValue);napeDebugEnabled=inValue.Cast< bool >(); return inValue; }
 		break;
@@ -686,14 +456,11 @@ void FlxNapeState_obj::__GetFields(Array< ::String> &outFields)
 	outFields->push(HX_CSTRING("velocityIterations"));
 	outFields->push(HX_CSTRING("positionIterations"));
 	outFields->push(HX_CSTRING("napeDebugEnabled"));
-	outFields->push(HX_CSTRING("_physDbgSpr"));
-	outFields->push(HX_CSTRING("_button"));
 	super::__GetFields(outFields);
 };
 
 static ::String sStaticFields[] = {
 	HX_CSTRING("space"),
-	HX_CSTRING("get_debug"),
 	String(null()) };
 
 #if HXCPP_SCRIPTABLE
@@ -701,8 +468,6 @@ static hx::StorageInfo sMemberStorageInfo[] = {
 	{hx::fsInt,(int)offsetof(FlxNapeState_obj,velocityIterations),HX_CSTRING("velocityIterations")},
 	{hx::fsInt,(int)offsetof(FlxNapeState_obj,positionIterations),HX_CSTRING("positionIterations")},
 	{hx::fsBool,(int)offsetof(FlxNapeState_obj,napeDebugEnabled),HX_CSTRING("napeDebugEnabled")},
-	{hx::fsObject /*::nape::util::ShapeDebug*/ ,(int)offsetof(FlxNapeState_obj,_physDbgSpr),HX_CSTRING("_physDbgSpr")},
-	{hx::fsObject /*::flixel::system::ui::FlxSystemButton*/ ,(int)offsetof(FlxNapeState_obj,_button),HX_CSTRING("_button")},
 	{ hx::fsUnknown, 0, null()}
 };
 #endif
@@ -711,8 +476,6 @@ static ::String sMemberFields[] = {
 	HX_CSTRING("velocityIterations"),
 	HX_CSTRING("positionIterations"),
 	HX_CSTRING("napeDebugEnabled"),
-	HX_CSTRING("_physDbgSpr"),
-	HX_CSTRING("_button"),
 	HX_CSTRING("create"),
 	HX_CSTRING("createWalls"),
 	HX_CSTRING("update"),
@@ -720,7 +483,6 @@ static ::String sMemberFields[] = {
 	HX_CSTRING("destroy"),
 	HX_CSTRING("set_napeDebugEnabled"),
 	HX_CSTRING("drawPhysDebug"),
-	HX_CSTRING("toggleDebug"),
 	String(null()) };
 
 static void sMarkStatics(HX_MARK_PARAMS) {

@@ -6,9 +6,6 @@
 #ifndef INCLUDED_flixel_FlxBasic
 #include <flixel/FlxBasic.h>
 #endif
-#ifndef INCLUDED_flixel_FlxG
-#include <flixel/FlxG.h>
-#endif
 #ifndef INCLUDED_flixel_FlxObject
 #include <flixel/FlxObject.h>
 #endif
@@ -32,12 +29,6 @@
 #endif
 #ifndef INCLUDED_flixel_interfaces_IFlxPooled
 #include <flixel/interfaces/IFlxPooled.h>
-#endif
-#ifndef INCLUDED_flixel_system_debug_LogStyle
-#include <flixel/system/debug/LogStyle.h>
-#endif
-#ifndef INCLUDED_flixel_system_frontEnds_LogFrontEnd
-#include <flixel/system/frontEnds/LogFrontEnd.h>
 #endif
 #ifndef INCLUDED_flixel_tile_FlxTilemap
 #include <flixel/tile/FlxTilemap.h>
@@ -86,12 +77,6 @@
 #endif
 #ifndef INCLUDED_nape_space_Space
 #include <nape/space/Space.h>
-#endif
-#ifndef INCLUDED_nape_util_Debug
-#include <nape/util/Debug.h>
-#endif
-#ifndef INCLUDED_nape_util_ShapeDebug
-#include <nape/util/ShapeDebug.h>
 #endif
 #ifndef INCLUDED_zpp_nape_geom_ZPP_Vec2
 #include <zpp_nape/geom/ZPP_Vec2.h>
@@ -1335,8 +1320,6 @@ int CollideIndex = __o_CollideIndex.Default(1);
 {
 		HX_STACK_LINE(98)
 		if (((this->_data == null()))){
-			HX_STACK_LINE(100)
-			::flixel::FlxG_obj::log->advanced(HX_CSTRING("loadMap has to be called first!"),::flixel::system::debug::LogStyle_obj::ERROR,true);
 			HX_STACK_LINE(101)
 			return null();
 		}
@@ -1404,8 +1387,6 @@ Void FlxNapeTilemap_obj::setupTileIndices( Array< int > tileIndices,::nape::phys
 		HX_STACK_ARG(mat,"mat")
 		HX_STACK_LINE(124)
 		if (((this->_data == null()))){
-			HX_STACK_LINE(126)
-			::flixel::FlxG_obj::log->advanced(HX_CSTRING("loadMap has to be called first!"),::flixel::system::debug::LogStyle_obj::ERROR,true);
 			HX_STACK_LINE(127)
 			return null();
 		}
@@ -1464,22 +1445,6 @@ return null();
 
 
 HX_DEFINE_DYNAMIC_FUNC2(FlxNapeTilemap_obj,setupTileIndices,(void))
-
-Void FlxNapeTilemap_obj::drawDebug( ){
-{
-		HX_STACK_FRAME("flixel.addons.nape.FlxNapeTilemap","drawDebug",0x02c11e92,"flixel.addons.nape.FlxNapeTilemap.drawDebug","flixel/addons/nape/FlxNapeTilemap.hx",143,0x86ce3ecc)
-		HX_STACK_THIS(this)
-		HX_STACK_LINE(144)
-		::nape::util::ShapeDebug _g = ::flixel::addons::nape::FlxNapeState_obj::get_debug();		HX_STACK_VAR(_g,"_g");
-		HX_STACK_LINE(144)
-		if (((_g == null()))){
-			HX_STACK_LINE(146)
-			this->super::drawDebug();
-		}
-	}
-return null();
-}
-
 
 Void FlxNapeTilemap_obj::constructCollider( ::nape::phys::Material mat){
 {
@@ -2538,9 +2503,6 @@ Dynamic FlxNapeTilemap_obj::__Field(const ::String &inName,bool inCallProp)
 	case 7:
 		if (HX_FIELD_EQ(inName,"loadMap") ) { return loadMap_dyn(); }
 		break;
-	case 9:
-		if (HX_FIELD_EQ(inName,"drawDebug") ) { return drawDebug_dyn(); }
-		break;
 	case 11:
 		if (HX_FIELD_EQ(inName,"_binaryData") ) { return _binaryData; }
 		break;
@@ -2600,7 +2562,6 @@ static ::String sMemberFields[] = {
 	HX_CSTRING("placeCustomPolygon"),
 	HX_CSTRING("setupCollideIndex"),
 	HX_CSTRING("setupTileIndices"),
-	HX_CSTRING("drawDebug"),
 	HX_CSTRING("constructCollider"),
 	HX_CSTRING("constructRectangle"),
 	String(null()) };

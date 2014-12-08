@@ -1293,7 +1293,7 @@ void PlayState_obj::__Mark(HX_MARK_PARAMS)
 	HX_MARK_MEMBER_NAME(player,"player");
 	HX_MARK_MEMBER_NAME(mouseCounter,"mouseCounter");
 	HX_MARK_MEMBER_NAME(preCue,"preCue");
-	::flixel::addons::nape::FlxNapeState_obj::__Mark(HX_MARK_ARG);
+	::flixel::FlxState_obj::__Mark(HX_MARK_ARG);
 	HX_MARK_END_CLASS();
 }
 
@@ -1302,7 +1302,7 @@ void PlayState_obj::__Visit(HX_VISIT_PARAMS)
 	HX_VISIT_MEMBER_NAME(player,"player");
 	HX_VISIT_MEMBER_NAME(mouseCounter,"mouseCounter");
 	HX_VISIT_MEMBER_NAME(preCue,"preCue");
-	::flixel::addons::nape::FlxNapeState_obj::__Visit(HX_VISIT_ARG);
+	::flixel::FlxState_obj::__Visit(HX_VISIT_ARG);
 }
 
 Dynamic PlayState_obj::__Field(const ::String &inName,bool inCallProp)

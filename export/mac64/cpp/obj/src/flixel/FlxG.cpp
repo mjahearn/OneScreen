@@ -69,9 +69,6 @@
 #ifndef INCLUDED_flixel_system_FlxVersion
 #include <flixel/system/FlxVersion.h>
 #endif
-#ifndef INCLUDED_flixel_system_debug_LogStyle
-#include <flixel/system/debug/LogStyle.h>
-#endif
 #ifndef INCLUDED_flixel_system_frontEnds_BitmapFrontEnd
 #include <flixel/system/frontEnds/BitmapFrontEnd.h>
 #endif
@@ -119,9 +116,6 @@
 #endif
 #ifndef INCLUDED_flixel_util_FlxCollision
 #include <flixel/util/FlxCollision.h>
-#endif
-#ifndef INCLUDED_flixel_util_FlxMath
-#include <flixel/util/FlxMath.h>
 #endif
 #ifndef INCLUDED_flixel_util_FlxPoint
 #include <flixel/util/FlxPoint.h>
@@ -196,45 +190,6 @@ Dynamic FlxG_obj::__Create(hx::DynamicArray inArgs)
 {  hx::ObjectPtr< FlxG_obj > result = new FlxG_obj();
 	result->__construct();
 	return result;}
-
-::openfl::_v2::display::DisplayObject FlxG_obj::removeChild_openfl__v2_display_DisplayObject( ::openfl::_v2::display::DisplayObject Child){
-	HX_STACK_FRAME("flixel.FlxG","removeChild_openfl__v2_display_DisplayObject",0x5464d8df,"flixel.FlxG.removeChild_openfl__v2_display_DisplayObject","flixel/FlxG.hx",405,0x8e176836)
-	HX_STACK_ARG(Child,"Child")
-	HX_STACK_LINE(406)
-	if ((::flixel::FlxG_obj::game->contains(Child))){
-		HX_STACK_LINE(408)
-		::flixel::FlxG_obj::game->removeChild(Child);
-	}
-	HX_STACK_LINE(410)
-	return Child;
-}
-
-
-STATIC_HX_DEFINE_DYNAMIC_FUNC1(FlxG_obj,removeChild_openfl__v2_display_DisplayObject,return )
-
-::openfl::_v2::display::DisplayObject FlxG_obj::addChildBelowMouse_openfl__v2_display_DisplayObject( ::openfl::_v2::display::DisplayObject Child,hx::Null< int >  __o_IndexModifier){
-int IndexModifier = __o_IndexModifier.Default(0);
-	HX_STACK_FRAME("flixel.FlxG","addChildBelowMouse_openfl__v2_display_DisplayObject",0xf5715dba,"flixel.FlxG.addChildBelowMouse_openfl__v2_display_DisplayObject","flixel/FlxG.hx",388,0x8e176836)
-	HX_STACK_ARG(Child,"Child")
-	HX_STACK_ARG(IndexModifier,"IndexModifier")
-{
-		HX_STACK_LINE(389)
-		int index = ::flixel::FlxG_obj::game->getChildIndex(::flixel::FlxG_obj::game->_inputContainer);		HX_STACK_VAR(index,"index");
-		HX_STACK_LINE(390)
-		int max = ::flixel::FlxG_obj::game->get_numChildren();		HX_STACK_VAR(max,"max");
-		HX_STACK_LINE(392)
-		int _g = ::flixel::util::FlxMath_obj::maxAdd(index,IndexModifier,max,null());		HX_STACK_VAR(_g,"_g");
-		HX_STACK_LINE(392)
-		index = _g;
-		HX_STACK_LINE(393)
-		::flixel::FlxG_obj::game->addChildAt(Child,index);
-		HX_STACK_LINE(394)
-		return Child;
-	}
-}
-
-
-STATIC_HX_DEFINE_DYNAMIC_FUNC2(FlxG_obj,addChildBelowMouse_openfl__v2_display_DisplayObject,return )
 
 bool FlxG_obj::autoPause;
 
@@ -627,7 +582,7 @@ int FlxG_obj::set_updateFramerate( int Framerate){
 	HX_STACK_LINE(530)
 	if (((Framerate < ::flixel::FlxG_obj::drawFramerate))){
 		HX_STACK_LINE(532)
-		::flixel::FlxG_obj::log->advanced(HX_CSTRING("FlxG.framerate: The game's framerate shouldn't be smaller than the flash framerate, since it can stop your game from updating."),::flixel::system::debug::LogStyle_obj::WARNING,true);
+		Dynamic();
 	}
 	HX_STACK_LINE(535)
 	Float _g = ::Math_obj::abs((Float((int)1000) / Float(Framerate)));		HX_STACK_VAR(_g,"_g");
@@ -657,7 +612,7 @@ int FlxG_obj::set_drawFramerate( int Framerate){
 	HX_STACK_LINE(548)
 	if (((Framerate > _g))){
 		HX_STACK_LINE(550)
-		::flixel::FlxG_obj::log->advanced(HX_CSTRING("FlxG.drawFramerate: The update framerate shouldn't be smaller than the draw framerate, since it can stop your game from updating."),::flixel::system::debug::LogStyle_obj::WARNING,true);
+		Dynamic();
 	}
 	HX_STACK_LINE(553)
 	Float _g1 = ::Math_obj::abs(Framerate);		HX_STACK_VAR(_g1,"_g1");
@@ -817,12 +772,6 @@ Dynamic FlxG_obj::__Field(const ::String &inName,bool inCallProp)
 		if (HX_FIELD_EQ(inName,"pixelPerfectOverlap") ) { return pixelPerfectOverlap_dyn(); }
 		if (HX_FIELD_EQ(inName,"get_updateFramerate") ) { return get_updateFramerate_dyn(); }
 		if (HX_FIELD_EQ(inName,"set_updateFramerate") ) { return set_updateFramerate_dyn(); }
-		break;
-	case 44:
-		if (HX_FIELD_EQ(inName,"removeChild_openfl__v2_display_DisplayObject") ) { return removeChild_openfl__v2_display_DisplayObject_dyn(); }
-		break;
-	case 51:
-		if (HX_FIELD_EQ(inName,"addChildBelowMouse_openfl__v2_display_DisplayObject") ) { return addChildBelowMouse_openfl__v2_display_DisplayObject_dyn(); }
 	}
 	return super::__Field(inName,inCallProp);
 }
@@ -898,8 +847,6 @@ void FlxG_obj::__GetFields(Array< ::String> &outFields)
 };
 
 static ::String sStaticFields[] = {
-	HX_CSTRING("removeChild_openfl__v2_display_DisplayObject"),
-	HX_CSTRING("addChildBelowMouse_openfl__v2_display_DisplayObject"),
 	HX_CSTRING("autoPause"),
 	HX_CSTRING("fixedTimestep"),
 	HX_CSTRING("timeScale"),

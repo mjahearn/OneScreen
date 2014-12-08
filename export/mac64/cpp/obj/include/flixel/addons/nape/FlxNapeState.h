@@ -12,20 +12,10 @@ HX_DECLARE_CLASS3(flixel,addons,nape,FlxNapeState)
 HX_DECLARE_CLASS2(flixel,group,FlxGroup)
 HX_DECLARE_CLASS2(flixel,group,FlxTypedGroup)
 HX_DECLARE_CLASS2(flixel,interfaces,IFlxDestroyable)
-HX_DECLARE_CLASS3(flixel,system,ui,FlxSystemButton)
 HX_DECLARE_CLASS2(nape,phys,Body)
 HX_DECLARE_CLASS2(nape,phys,Interactor)
 HX_DECLARE_CLASS2(nape,phys,Material)
 HX_DECLARE_CLASS2(nape,space,Space)
-HX_DECLARE_CLASS2(nape,util,Debug)
-HX_DECLARE_CLASS2(nape,util,ShapeDebug)
-HX_DECLARE_CLASS3(openfl,_v2,display,DisplayObject)
-HX_DECLARE_CLASS3(openfl,_v2,display,DisplayObjectContainer)
-HX_DECLARE_CLASS3(openfl,_v2,display,IBitmapDrawable)
-HX_DECLARE_CLASS3(openfl,_v2,display,InteractiveObject)
-HX_DECLARE_CLASS3(openfl,_v2,display,Sprite)
-HX_DECLARE_CLASS3(openfl,_v2,events,EventDispatcher)
-HX_DECLARE_CLASS3(openfl,_v2,events,IEventDispatcher)
 namespace flixel{
 namespace addons{
 namespace nape{
@@ -49,15 +39,11 @@ class HXCPP_CLASS_ATTRIBUTES  FlxNapeState_obj : public ::flixel::FlxState_obj{
 		HX_DO_RTTI;
 		static void __boot();
 		static void __register();
-		void __Mark(HX_MARK_PARAMS);
-		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_CSTRING("FlxNapeState"); }
 
 		int velocityIterations;
 		int positionIterations;
 		bool napeDebugEnabled;
-		::nape::util::ShapeDebug _physDbgSpr;
-		::flixel::system::ui::FlxSystemButton _button;
 		virtual Void create( );
 
 		virtual ::nape::phys::Body createWalls( hx::Null< Float >  MinX,hx::Null< Float >  MinY,hx::Null< Float >  MaxX,hx::Null< Float >  MaxY,hx::Null< Float >  Thickness,::nape::phys::Material _Material);
@@ -75,13 +61,7 @@ class HXCPP_CLASS_ATTRIBUTES  FlxNapeState_obj : public ::flixel::FlxState_obj{
 		virtual Void drawPhysDebug( );
 		Dynamic drawPhysDebug_dyn();
 
-		virtual Void toggleDebug( );
-		Dynamic toggleDebug_dyn();
-
 		static ::nape::space::Space space;
-		static ::nape::util::ShapeDebug get_debug( );
-		static Dynamic get_debug_dyn();
-
 };
 
 } // end namespace flixel

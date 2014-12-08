@@ -72,12 +72,6 @@
 #ifndef INCLUDED_nape_space_Space
 #include <nape/space/Space.h>
 #endif
-#ifndef INCLUDED_nape_util_Debug
-#include <nape/util/Debug.h>
-#endif
-#ifndef INCLUDED_nape_util_ShapeDebug
-#include <nape/util/ShapeDebug.h>
-#endif
 #ifndef INCLUDED_zpp_nape_geom_ZPP_Vec2
 #include <zpp_nape/geom/ZPP_Vec2.h>
 #endif
@@ -1208,22 +1202,6 @@ return null();
 
 HX_DEFINE_DYNAMIC_FUNC2(FlxNapeSprite_obj,setDrag,(void))
 
-Void FlxNapeSprite_obj::drawDebug( ){
-{
-		HX_STACK_FRAME("flixel.addons.nape.FlxNapeSprite","drawDebug",0xa4eca443,"flixel.addons.nape.FlxNapeSprite.drawDebug","flixel/addons/nape/FlxNapeSprite.hx",257,0x811bdfdd)
-		HX_STACK_THIS(this)
-		HX_STACK_LINE(258)
-		::nape::util::ShapeDebug _g = ::flixel::addons::nape::FlxNapeState_obj::get_debug();		HX_STACK_VAR(_g,"_g");
-		HX_STACK_LINE(258)
-		if (((_g == null()))){
-			HX_STACK_LINE(260)
-			this->super::drawDebug();
-		}
-	}
-return null();
-}
-
-
 Void FlxNapeSprite_obj::updatePhysObjects( ){
 {
 		HX_STACK_FRAME("flixel.addons.nape.FlxNapeSprite","updatePhysObjects",0x8c2c922d,"flixel.addons.nape.FlxNapeSprite.updatePhysObjects","flixel/addons/nape/FlxNapeSprite.hx",270,0x811bdfdd)
@@ -1618,9 +1596,6 @@ Dynamic FlxNapeSprite_obj::__Field(const ::String &inName,bool inCallProp)
 		if (HX_FIELD_EQ(inName,"destroy") ) { return destroy_dyn(); }
 		if (HX_FIELD_EQ(inName,"setDrag") ) { return setDrag_dyn(); }
 		break;
-	case 9:
-		if (HX_FIELD_EQ(inName,"drawDebug") ) { return drawDebug_dyn(); }
-		break;
 	case 11:
 		if (HX_FIELD_EQ(inName,"_linearDrag") ) { return _linearDrag; }
 		break;
@@ -1703,7 +1678,6 @@ static ::String sMemberFields[] = {
 	HX_CSTRING("setBodyMaterial"),
 	HX_CSTRING("destroyPhysObjects"),
 	HX_CSTRING("setDrag"),
-	HX_CSTRING("drawDebug"),
 	HX_CSTRING("updatePhysObjects"),
 	HX_CSTRING("set_physicsEnabled"),
 	String(null()) };

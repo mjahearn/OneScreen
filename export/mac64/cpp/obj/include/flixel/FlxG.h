@@ -70,12 +70,6 @@ class HXCPP_CLASS_ATTRIBUTES  FlxG_obj : public hx::Object{
 		static void __register();
 		::String __ToString() const { return HX_CSTRING("FlxG"); }
 
-		static ::openfl::_v2::display::DisplayObject removeChild_openfl__v2_display_DisplayObject( ::openfl::_v2::display::DisplayObject Child);
-		static Dynamic removeChild_openfl__v2_display_DisplayObject_dyn();
-
-		static ::openfl::_v2::display::DisplayObject addChildBelowMouse_openfl__v2_display_DisplayObject( ::openfl::_v2::display::DisplayObject Child,hx::Null< int >  IndexModifier);
-		static Dynamic addChildBelowMouse_openfl__v2_display_DisplayObject_dyn();
-
 		static bool autoPause;
 		static bool fixedTimestep;
 		static Float timeScale;

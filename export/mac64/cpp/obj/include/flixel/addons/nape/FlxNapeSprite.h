@@ -71,8 +71,6 @@ class HXCPP_CLASS_ATTRIBUTES  FlxNapeSprite_obj : public ::flixel::FlxSprite_obj
 		virtual Void setDrag( hx::Null< Float >  LinearDrag,hx::Null< Float >  AngularDrag);
 		Dynamic setDrag_dyn();
 
-		virtual Void drawDebug( );
-
 		virtual Void updatePhysObjects( );
 		Dynamic updatePhysObjects_dyn();
 

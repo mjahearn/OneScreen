@@ -7,6 +7,7 @@ tiled map (1h) - 2h50m (lotta distractions)
 pockets (30m) - 1h52m (less distractions [though still some], just hard)
 player dying/respawning (1h) - 3h41m (figuring out cueball collision with player) + 1h14m (acutally implementing dying; cut respawning)
 enemy balls (30m) - 1h17m
++ ~35m on ghost cue ball
 
 estimated: 2h30m
 done: 16h08m (6h30m est)

@@ -62,8 +62,6 @@ class HXCPP_CLASS_ATTRIBUTES  FlxNapeTilemap_obj : public ::flixel::tile::FlxTil
 		virtual Void setupTileIndices( Array< int > tileIndices,::nape::phys::Material mat);
 		Dynamic setupTileIndices_dyn();
 
-		virtual Void drawDebug( );
-
 		virtual Void constructCollider( ::nape::phys::Material mat);
 		Dynamic constructCollider_dyn();
 

@@ -15,6 +15,7 @@
 -cp /usr/lib/haxe/lib/lime/2,0,0/legacy
 -D tools=2.0.0
 -D lime-legacy
+-D FLX_NO_DEBUG
 -D no-compilation
 -D NAPE_RELEASE_BUILD
 -D native
